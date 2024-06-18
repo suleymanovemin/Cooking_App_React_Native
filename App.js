@@ -13,10 +13,23 @@ export default function App() {
       <StatusBar style="dark" />
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="MealsCategories" component={CategoriesScreen} />
+          <Stack.Screen
+            options={{
+              title: "All Categories",
+            }}
+            name="MealsCategories"
+            component={CategoriesScreen}
+          />
           <Stack.Screen
             name="MealsOverViewScreen"
             component={MealsOverViewScreen}
+            // options={({ route,navigation }) => {
+            //  const catId = route.params.categoryId;
+
+            //  return {
+            //   title: catId,
+            //  }
+            // }}
           />
         </Stack.Navigator>
       </NavigationContainer>
