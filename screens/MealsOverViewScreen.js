@@ -18,6 +18,9 @@ const MealsOverViewScreen = ({ route, navigation }) => {
   const renderMealItem = (itemData) => {
     return (
       <MealItem
+        onPress={() =>
+          navigation.navigate("MealDetail", { mealId: itemData.item.id })
+        }
         title={itemData.item.title}
         imageUrl={itemData.item.imageUrl}
         duration={itemData.item.duration}

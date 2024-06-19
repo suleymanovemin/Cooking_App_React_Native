@@ -37,11 +37,18 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
+    borderRadius: 8,
+    overflow: "hidden",
   },
   buttonPressed: {
     opacity: 0.75,
     backgroundColor: "#ccc",
     borderRadius: 8,
+    shadowColor: "black",
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 8,
+    elevation: 4,
   },
   innerContainer: {
     flex: 1,

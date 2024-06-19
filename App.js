@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MealsOverViewScreen from "./screens/MealsOverViewScreen";
+import MealDetailScreen from "./screens/MealDetailScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,12 +32,13 @@ export default function App() {
             //  }
             // }}
           />
+          <Stack.Screen
+            options={{ contentStyle: { backgroundColor: "#fdf2e9" } }}
+            name="MealDetail"
+            component={MealDetailScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {},
-});
