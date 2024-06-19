@@ -15,6 +15,7 @@ const MealDetailScreen = ({ route, navigation }) => {
       headerRight: () => {
         return <IconButton color="red" icon="heart-outline" />;
       },
+      title: meal.title,
     });
   }, [meal, navigation]);
   return (
